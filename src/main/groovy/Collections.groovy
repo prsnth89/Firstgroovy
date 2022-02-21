@@ -24,6 +24,9 @@ println myList
 fruits.reverse()
 println(fruits)
 
+def name=struthi
+println name
+
 //asec
 fruits.sort()
 println(fruits)
