@@ -1,0 +1,68 @@
+plugins {
+    id 'groovy'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.5'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+application{
+    mainClass='groovy.SimpleProgram'
+}
+
+test {
+  //  wait()
+    useJUnitPlatform()
+}
+
+/*task hello  {
+            println 'Test Hello'
+
+}
+
+task count  {
+    4.times{
+        println "Prasanth Hello --Iteration no--$it"
+    }
+}*/
+
+/*task printMyName(dependsOn : count)  {
+    def name="Prasanth"
+    name.each(){
+        println "$it"
+    }
+}*/
+
+//count.dependsOn(hello)
+
+
+
+
+/*task taskX  {
+    println 'taskX'
+}
+
+taskX.dependsOn {
+    tasks.findAll {
+        task -> task.name.startsWith('lib')
+    }
+}
+task lib1  {
+    println 'lib1'
+}
+task lib2  {
+    println 'lib2'
+}
+task notALib  {
+    println 'notALib'
+}*/
